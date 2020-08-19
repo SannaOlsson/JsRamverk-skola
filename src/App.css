@@ -1,5 +1,60 @@
+.menuBar{
+  display: 'block';
+  margin: auto;
+  padding: 10px;
+}
+
+.menuBar a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+
+.menuBar a:hover{
+  text-decoration: none;
+  color: #1ed760;
+  font-size: 16px;
+}
+
+.menuBar td{
+  padding-right: 20px;
+}
+
+input[type=text] {
+  color: white;
+  height: 40px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #1d1d1d;
+  font-family: "Trebuchet MS";
+  border-color: #2d2d2d;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border-color: #1ed760;
+}
+
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.row{
+  float: left;
+  margin: auto;
+}
+
 .App {
   text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-logo {
@@ -36,3 +91,4 @@
     transform: rotate(360deg);
   }
 }
+

@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom' // installerat med npm
+import MoviePage from './MoviePage'
+import Navigation from './Navigation'
+import Home from './Home.js'
+import TvPage from './TvPage'
+import TrailerPage from './trailerPage'
+import Search from './Search'
+import NowPlaying from './NowPlaying'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  render(){
+    return (
+      <BrowserRouter>
+        <div className="App">
+
+          {/* Navigation är menyn */}
+          <Navigation />
+
+          {/* Av-kommentera denna för sökfunktion */}
+          {/* <Search/> */}
+
+          {/* Här är alla sidor i routingen */}
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/moviepage" component={MoviePage} />
+            <Route path="/tvpage" component={TvPage} />
+            <Route path="/trailerPage" component={TrailerPage} />
+            <Route path="/search" component={Search} />
+            <Route path="/nowplaying" component={NowPlaying} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  } 
 }
-
-export default App;
+export default App
